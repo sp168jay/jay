@@ -174,6 +174,12 @@ Route::get('API/{user}FromPhotos', ["as" => "API/all", function ($user) {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+//Route::group(['middleware' => ['web']], function () {
+//    //
+//});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });
