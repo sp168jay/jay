@@ -9,6 +9,14 @@
 5）產生測試用資料：到專案目錄下執行 artisan db:seed
 
 
+
+官網認證機制：
+執行 artisan make:auth 產生 view 及 route。
+到 homestead.app/home 即可看到。
+
+
+
+
 錯誤訊息：
 [Symfony\Component\Debug\Exception\FatalThrowableError]
 Fatal error: Class 'CreatePasswordResetsTable' not found
