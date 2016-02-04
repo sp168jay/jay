@@ -150,13 +150,14 @@ Route::get('API/getPhotosFrom({user})', ["as" => "API/all", function ($user) {
 }]);
 
 Route::get('API/PhotosFrom{user}', ["as" => "API/all", function ($user) {
-    $photos = App\Models\User::where('user_name','=',$user)->first()->photos;
-    return view('fileUploadSuccess',['datas' => $photos]);
+    $photos = App\Models\User::where('user_name','=',$user)->first()->photos;//找到之後，取得第一筆，然後執行 model 中的 photos()
+    return view('photosFromUser',['datas' => $photos]);//回傳一個陣列
 }]);
 
 Route::get('API/{user}FromPhotos', ["as" => "API/all", function ($user) {
-    $user = App\Models\Photo::where('by_user','=',$user)->first()->user;
-    return view('fileUploadSuccess',['datas' => $user]);
+    $user = App\Models\Photo::where('by_user','=',$user)->first()->user;//找到之後，取得第一筆，然後執行 model 中的 user()
+//    dd($user);//類似 php 的 var_dump
+    return view('userFromPhotos',['data' => $user]);//回傳一筆資料，不是陣列
 }]);
 
 
