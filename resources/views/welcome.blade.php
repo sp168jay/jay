@@ -36,6 +36,14 @@
         </style>
     </head>
     <body>
+        <a href="http://tw.yahoo.com">yahoo</a><br>
+        <a href="dataInput/123">輸入測試</a><br>
+        <a href="{{route('home')}}">首頁</a><br>
+        <a href="{{route('Input',456)}}">資料輸入</a><br>
+        <a href="{{route('InputOptional','test')}}">資料可輸入</a><br>
+        <a href="{{route('InputMulti',['abc',456])}}">多筆資料</a><br>
+        <a href="{{route('vendorWelcome')}}">vedorWelcome 的 view</a><br>
+        
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
