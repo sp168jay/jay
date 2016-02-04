@@ -1,5 +1,13 @@
 ## Laravel PHP Framework
 
+下載到自己的電腦測試時：
+1）請先到 database/migrations/ 底下，先確認資料庫名稱跟我的不一樣，以及資料衝突。
+2）準備好 .env 檔，同時執行 artisan key:generate 產生專案用的 key。會自己加到 .env 裹。
+3）安裝必需的套件: 到專案目錄下執行 composer install
+4）產生資料表：到專案目錄下執行 artisan migrate 
+5）產生測試用資料：到專案目錄下執行 artisan db:seed
+
+
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
